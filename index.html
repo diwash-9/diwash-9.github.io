@@ -21,10 +21,7 @@
   <header class="masthead">
     <div class="wrap masthead-row">
       <a class="site-path" href="#top">diwash-9<span class="dim">.github.io</span></a>
-      <p class="masthead-meta"><span>Kathmandu</span> <span aria-hidden="true">·</span> <time id="localTime" datetime="">--:--</time> <span aria-hidden="true">·</span> <span id="localDate"></span></p>
-      <button class="palette-btn" id="paletteOpen" type="button" aria-haspopup="dialog">
-        <span aria-hidden="true">⌘</span>K <span class="dim">to navigate</span>
-      </button>
+      <p class="masthead-meta">Kathmandu, Nepal</p>
     </div>
     <nav class="wrap index-nav" aria-label="Site index">
       <a href="#projects">Projects</a>
@@ -40,10 +37,6 @@
       <p class="kicker">Portfolio</p>
       <h1 id="opening-title">Devraj Khatiwada</h1>
       <p class="lede">Computer Science student from Nepal. I build web apps, Linux desktop tools, and teaching material for CS students.</p>
-      <ul class="hints" aria-label="Keyboard shortcuts">
-        <li><kbd>Ctrl</kbd> + <kbd>K</kbd> to navigate</li>
-        <li><kbd>/</kbd> to search the archive</li>
-      </ul>
     </section>
 
     <section class="wrap section" id="projects" aria-labelledby="projects-title">
@@ -92,18 +85,6 @@
               <div><dt>Tests</dt><dd>85 Vitest tests across unit and action suites</dd></div>
             </dl>
           </div>
-          <figure class="toy" aria-labelledby="toy-title">
-            <figcaption id="toy-title">Example group. Change a score to see the table re-sort.</figcaption>
-            <div class="toy-fixtures" id="toyFixtures"></div>
-            <div class="table-scroll">
-            <table class="toy-table">
-              <caption class="visually-hidden">Toy group standings, updated live</caption>
-              <thead><tr><th scope="col">Team</th><th scope="col">P</th><th scope="col">W</th><th scope="col">D</th><th scope="col">L</th><th scope="col">GD</th><th scope="col">Pts</th></tr></thead>
-              <tbody id="toyTable"></tbody>
-            </table>
-            </div>
-            <button class="mini-btn" id="toyReset" type="button">Reset scores</button>
-          </figure>
         </div>
         <p class="links">
           <a class="btn" href="https://matchdayhq.vercel.app" target="_blank" rel="noopener">Open the app</a>
@@ -267,9 +248,7 @@
           <p><strong>About:</strong> chapter by chapter Numerical Methods, from non-linear equations through interpolation, regression, differentiation, and integration, with worked examples and one-shot recaps.</p>
           <p><strong>Why it exists:</strong> the subject is compulsory and dense, and most references are in English. Teaching it in Nepali lowers the barrier for students seeing these methods the first time.</p>
           <p><strong>For:</strong> bachelor level CSIT, BCA, BIM, and engineering students taking Numerical Methods.</p>
-          <div class="embed-slot" data-playlist="PL_t29gGD01swfExTzXakkyyuExvVdsh9b"></div>
           <p class="links">
-            <button class="mini-btn" type="button" data-preview>Preview playlist</button>
             <a href="https://www.youtube.com/playlist?list=PL_t29gGD01swfExTzXakkyyuExvVdsh9b" target="_blank" rel="noopener">Open on YouTube</a>
           </p>
         </article>
@@ -281,9 +260,7 @@
           <p><strong>About:</strong> an end to end exploratory data analysis in Python on a real football dataset: understanding the data, cleaning it, descriptive statistics, uni/bi/multivariate analysis, correlation, feature engineering, and football insights.</p>
           <p><strong>Why it exists:</strong> EDA tutorials often use tiny toy datasets. Working through 25 years of messy match data shows the unglamorous middle of data work: cleaning, checking, and questioning.</p>
           <p><strong>For:</strong> Python learners and students meeting data analysis for the first time.</p>
-          <div class="embed-slot" data-playlist="PLLSUNk1as9EE"></div>
           <p class="links">
-            <button class="mini-btn" type="button" data-preview>Preview playlist</button>
             <a href="https://www.youtube.com/playlist?list=PLLSUNk1as9EE" target="_blank" rel="noopener">Open on YouTube</a>
           </p>
         </article>
@@ -295,9 +272,7 @@
           <p><strong>About:</strong> walkthroughs of the first, second, and third semester CSIT syllabi with study resources for each.</p>
           <p><strong>Why it exists:</strong> new CSIT students often ask the same questions: what comes when, what matters, and where to study it. This answers those once, on video.</p>
           <p><strong>For:</strong> current and incoming BSc.CSIT students planning their semesters.</p>
-          <div class="embed-slot" data-playlist="PL_t29gGD01symSIyiEgRc5KgUDnsg9Sp6"></div>
           <p class="links">
-            <button class="mini-btn" type="button" data-preview>Preview playlist</button>
             <a href="https://www.youtube.com/playlist?list=PL_t29gGD01symSIyiEgRc5KgUDnsg9Sp6" target="_blank" rel="noopener">Open on YouTube</a>
           </p>
         </article>
@@ -327,17 +302,9 @@
   </main>
 
   <footer class="wrap footer">
-    <p>Hand-built HTML, CSS, and JS. No build step, no tracking. <a href="https://github.com/diwash-9/diwash-9.github.io" target="_blank" rel="noopener">Source</a></p>
+    <p>Built with plain HTML, CSS, and JavaScript. <a href="https://github.com/diwash-9/diwash-9.github.io" target="_blank" rel="noopener">Source</a></p>
     <p><span id="footYear"></span> Devraj Khatiwada · <a href="#top">Back to top</a></p>
   </footer>
-
-  <div class="palette-backdrop" id="paletteBackdrop" hidden></div>
-  <div class="palette" id="palette" role="dialog" aria-modal="true" aria-labelledby="paletteLabel" hidden>
-    <label class="visually-hidden" id="paletteLabel" for="paletteInput">Jump to a section or project</label>
-    <input id="paletteInput" type="text" placeholder="Type to jump: projects, Bidhan, teaching..." autocomplete="off" />
-    <ul id="paletteList" role="listbox" aria-label="Destinations"></ul>
-    <p class="palette-hint"><kbd>↑</kbd><kbd>↓</kbd> to move · <kbd>Enter</kbd> to go · <kbd>Esc</kbd> to close</p>
-  </div>
 
   <script src="script.js"></script>
 </body>
