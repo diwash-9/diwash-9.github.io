@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Devraj Khatiwada - Workshop</title>
-  <meta name="description" content="Personal workshop of Devraj Khatiwada, CS student from Nepal. Web apps like Bidhan and Matchday, Linux tools for Omarchy, and teaching resources." />
-  <meta property="og:title" content="Devraj Khatiwada - Workshop" />
-  <meta property="og:description" content="Software, experiments, and notes. Bidhan, Matchday, Omarchy tools, and teaching playlists." />
+  <title>Devraj Khatiwada</title>
+  <meta name="description" content="Portfolio of Devraj Khatiwada, CS student from Nepal. Web apps like Bidhan and Matchday, Linux tools for Omarchy, and teaching resources." />
+  <meta property="og:title" content="Devraj Khatiwada" />
+  <meta property="og:description" content="Projects, tools, and teaching material. Bidhan, Matchday, Omarchy tools, and playlists." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://diwash-9.github.io/" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%231c1a16'/><text x='50' y='69' font-size='54' font-family='Georgia,serif' fill='%23f6f2e9' text-anchor='middle'>d</text></svg>" />
@@ -27,31 +27,29 @@
       </button>
     </div>
     <nav class="wrap index-nav" aria-label="Site index">
-      <a href="#projects">01 Projects</a>
+      <a href="#projects">Projects</a>
       <a href="#tools">Tools</a>
-      <a href="#archive">02 Archive</a>
-      <a href="#teaching">03 Teaching</a>
-      <a href="#notes">04 Notes</a>
-      <a href="#about">05 About</a>
+      <a href="#archive">Archive</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#about">About</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="wrap opening" aria-labelledby="opening-title">
-      <p class="kicker">A personal workshop</p>
-      <h1 id="opening-title">Software, experiments,<br />and notes.</h1>
-      <p class="lede">This is where Devraj Khatiwada keeps the work: two web apps in production, a few Linux desktop tools, older experiments, and teaching material for CS students in Nepal.</p>
-      <ul class="hints" aria-label="How to use this site">
-        <li><kbd>Ctrl</kbd> + <kbd>K</kbd> jumps anywhere</li>
-        <li><kbd>/</kbd> searches the archive</li>
-        <li>Try the toy league table under Matchday</li>
+      <p class="kicker">Portfolio</p>
+      <h1 id="opening-title">Devraj Khatiwada</h1>
+      <p class="lede">Computer Science student from Nepal. I build web apps, Linux desktop tools, and teaching material for CS students.</p>
+      <ul class="hints" aria-label="Keyboard shortcuts">
+        <li><kbd>Ctrl</kbd> + <kbd>K</kbd> to navigate</li>
+        <li><kbd>/</kbd> to search the archive</li>
       </ul>
     </section>
 
     <section class="wrap section" id="projects" aria-labelledby="projects-title">
       <div class="section-head">
         <p class="kicker">01. Projects</p>
-        <h2 id="projects-title">The main bench.</h2>
+        <h2 id="projects-title">Projects</h2>
       </div>
 
       <article class="feature" aria-labelledby="bidhan-title">
@@ -95,13 +93,15 @@
             </dl>
           </div>
           <figure class="toy" aria-labelledby="toy-title">
-            <figcaption id="toy-title">A toy group, not real results. Change a score and the table re-sorts, the same way Matchday derives standings.</figcaption>
+            <figcaption id="toy-title">Example group. Change a score to see the table re-sort.</figcaption>
             <div class="toy-fixtures" id="toyFixtures"></div>
+            <div class="table-scroll">
             <table class="toy-table">
               <caption class="visually-hidden">Toy group standings, updated live</caption>
               <thead><tr><th scope="col">Team</th><th scope="col">P</th><th scope="col">W</th><th scope="col">D</th><th scope="col">L</th><th scope="col">GD</th><th scope="col">Pts</th></tr></thead>
               <tbody id="toyTable"></tbody>
             </table>
+            </div>
             <button class="mini-btn" id="toyReset" type="button">Reset scores</button>
           </figure>
         </div>
@@ -115,8 +115,8 @@
     <section class="wrap section" id="tools" aria-labelledby="tools-title">
       <div class="section-head">
         <p class="kicker">Tools</p>
-        <h2 id="tools-title">Small tools for a Linux desktop.</h2>
-        <p class="sub">Omarchy runs on Hyprland and ships without a few things Devraj wanted, so he wrote them. Each is a small install, documented in its own repository.</p>
+        <h2 id="tools-title">Developer tools.</h2>
+        <p class="sub">Utilities for the Omarchy Linux desktop.</p>
       </div>
       <div class="tool-list">
         <article class="tool" aria-labelledby="tool-bsdate">
@@ -145,8 +145,8 @@
     <section class="wrap section" id="archive" aria-labelledby="archive-title">
       <div class="section-head">
         <p class="kicker">02. Archive</p>
-        <h2 id="archive-title">Everything else, indexed.</h2>
-        <p class="sub">Coursework, games, and utilities. Search or filter, or press <kbd>/</kbd> to jump here from anywhere.</p>
+        <h2 id="archive-title">Archive.</h2>
+        <p class="sub">Coursework, games, and utilities.</p>
       </div>
       <div class="archive-controls">
         <div class="search-wrap">
@@ -255,8 +255,8 @@
     <section class="wrap section" id="teaching" aria-labelledby="teaching-title">
       <div class="section-head">
         <p class="kicker">03. Teaching</p>
-        <h2 id="teaching-title">Explaining things in public.</h2>
-        <p class="sub">Alongside the code, there is a teaching thread: structured video lectures for CSIT, BCA, BIM, and engineering students through Digital Nomad Academy, plus study material work with HamroCSIT. The lectures cover core subjects like Numerical Methods, data structures and algorithms, operating systems, networks, DBMS, and cryptography. A separate personal channel, theDevWorld, documents study sessions and things learned along the way.</p>
+        <h2 id="teaching-title">Teaching.</h2>
+        <p class="sub">Video lectures for CSIT, BCA, BIM, and engineering students through Digital Nomad Academy, plus study material work with HamroCSIT. Subjects include Numerical Methods, data structures and algorithms, operating systems, networks, DBMS, and cryptography.</p>
       </div>
       <div class="playlist-list">
         <article class="playlist" aria-labelledby="pl1-title">
@@ -305,34 +305,10 @@
       <p class="links"><a href="https://www.youtube.com/@digitalnomadacademy2" target="_blank" rel="noopener">Digital Nomad Academy on YouTube</a></p>
     </section>
 
-    <section class="wrap section" id="notes" aria-labelledby="notes-title">
-      <div class="section-head">
-        <p class="kicker">04. Notes</p>
-        <h2 id="notes-title">Three things the builds taught.</h2>
-      </div>
-      <ol class="notes">
-        <li>
-          <h3>Hearts have to be enforced on the server.</h3>
-          <p>In Bidhan, hearts gate quizzes, lesson completion, and article reveals. All of it is checked server side with 403s, because anything the client decides alone is a suggestion, not a rule. The UI mirrors the rule but never owns it.</p>
-          <p class="mono-line"><span>bidhan / backend</span></p>
-        </li>
-        <li>
-          <h3>Standings should be derived, never stored.</h3>
-          <p>In Matchday, points tables, tiebreakers, and bracket propagation are computed from results every time. There is no separate table state to drift out of sync, which is exactly what used to go wrong in the spreadsheets this replaces.</p>
-          <p class="mono-line"><span>matchday / fixtures</span></p>
-        </li>
-        <li>
-          <h3>Offline first is a feature, not a fallback.</h3>
-          <p>The Nepali calendar data in omarchy-bsdate is embedded in the plugin. No network calls means the bar widget never waits, never fails on bad wifi, and needs nothing installed beyond the shell itself.</p>
-          <p class="mono-line"><span>omarchy-bsdate / data</span></p>
-        </li>
-      </ol>
-    </section>
-
     <section class="wrap section" id="about" aria-labelledby="about-title">
       <div class="section-head">
-        <p class="kicker">05. About</p>
-        <h2 id="about-title">Compact, as promised.</h2>
+        <p class="kicker">04. About</p>
+        <h2 id="about-title">About.</h2>
       </div>
       <div class="about-grid">
         <dl class="spec">

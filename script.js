@@ -1,4 +1,4 @@
-/* Workshop interactions: clock, archive filter, copy buttons, toy table, previews, palette. */
+/* Site interactions: clock, archive filter, copy buttons, toy table, previews, palette. */
 (function () {
   "use strict";
 
@@ -240,7 +240,6 @@
       { label: "Tools for a Linux desktop", kind: "section", target: "#tools" },
       { label: "Archive index", kind: "section", target: "#archive" },
       { label: "Teaching and playlists", kind: "section", target: "#teaching" },
-      { label: "Field notes", kind: "section", target: "#notes" },
       { label: "About and contact", kind: "section", target: "#about" }
     ];
     Array.prototype.forEach.call(document.querySelectorAll("#ledger .ledger-row"), function (row) {
