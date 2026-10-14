@@ -5,6 +5,21 @@
   var yearEl = document.getElementById("footYear");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* Local time in Kathmandu */
+  var timeEl = document.getElementById("localTime");
+  function tickClock() {
+    if (!timeEl) return;
+    try {
+      var now = new Date();
+      timeEl.textContent = new Intl.DateTimeFormat("en-GB", {
+        hour: "2-digit", minute: "2-digit", timeZone: "Asia/Kathmandu"
+      }).format(now) + " NPT";
+      timeEl.setAttribute("datetime", now.toISOString());
+    } catch (e) { /* leave placeholder */ }
+  }
+  tickClock();
+  setInterval(tickClock, 30000);
+
   /* Archive: search + filter + count + empty state */
   var search = document.getElementById("archiveSearch");
   var chips = Array.prototype.slice.call(document.querySelectorAll(".chip"));
