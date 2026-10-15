@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f6f2e9" />
+  <rect x="72" y="72" width="1056" height="6" fill="#1c1a16" />
+  <text x="72" y="196" font-family="monospace" font-size="26" letter-spacing="4" fill="#205c40">PORTFOLIO</text>
+  <text x="72" y="330" font-family="Georgia, serif" font-size="104" fill="#1c1a16">Devraj Khatiwada</text>
+  <text x="72" y="410" font-family="Georgia, serif" font-size="44" fill="#5f594d">A Computer Science Student from Nepal</text>
+  <text x="72" y="474" font-family="monospace" font-size="28" fill="#5f594d">Web apps · Omarchy Linux tools · Teaching CSIT, BCA, BIM</text>
+  <rect x="72" y="520" width="140" height="6" fill="#205c40" />
+  <text x="72" y="586" font-family="monospace" font-size="28" fill="#1c1a16">diwash-9.github.io</text>
+</svg>

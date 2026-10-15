@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Devraj Khatiwada</title>
+    <script>
+      // Stash the deep link, bounce to the app shell, then let it restore the
+      // path with history.replaceState (see the inline script in index.html).
+      sessionStorage.redirect = location.href
+      location.replace("/")
+    </script>
+  </head>
+  <body></body>
+</html>

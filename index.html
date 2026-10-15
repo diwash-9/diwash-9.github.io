@@ -1,283 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Devraj Khatiwada</title>
-  <meta name="description" content="Portfolio of Devraj Khatiwada, CS student from Nepal. Web apps like Bidhan and Matchday, Linux tools for Omarchy, and teaching resources." />
-  <meta property="og:title" content="Devraj Khatiwada" />
-  <meta property="og:description" content="Projects, tools, and teaching material. Bidhan, Matchday, Omarchy tools, and playlists." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://diwash-9.github.io/" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%231c1a16'/><text x='50' y='69' font-size='54' font-family='Georgia,serif' fill='%23f6f2e9' text-anchor='middle'>d</text></svg>" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <a class="skip" href="#projects">Skip to projects</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devraj Khatiwada</title>
+    <meta
+      name="description"
+      content="Portfolio of Devraj Khatiwada, CS student from Nepal. Web apps like Bidhan and Matchday, Linux tools for Omarchy, and teaching resources."
+    />
+    <meta property="og:title" content="Devraj Khatiwada" />
+    <meta
+      property="og:description"
+      content="Projects, tools, and teaching material. Bidhan, Matchday, Omarchy tools, and playlists."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://diwash-9.github.io/" />
+    <meta property="og:image" content="https://diwash-9.github.io/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Devraj Khatiwada" />
+    <meta
+      name="twitter:description"
+      content="Projects, tools, and teaching material. Bidhan, Matchday, Omarchy tools, and playlists."
+    />
+    <meta name="twitter:image" content="https://diwash-9.github.io/og.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta
+      name="theme-color"
+      content="#f6f2e9"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#16140f"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Apply the saved theme before first paint to avoid a flash of the
+      // wrong colour scheme.
+      ;(function () {
+        try {
+          var stored = localStorage.getItem("theme")
+          var dark =
+            stored === "dark" ||
+            (!stored &&
+              window.matchMedia("(prefers-color-scheme: dark)").matches)
+          var root = document.documentElement
+          root.classList.toggle("dark", dark)
+          root.style.colorScheme = dark ? "dark" : "light"
+        } catch (e) {}
+      })()
 
-  <header class="masthead">
-    <div class="wrap masthead-row">
-      <a class="site-path" href="#top">diwash-9<span class="dim">.github.io</span></a>
-      <p class="masthead-meta">Kathmandu, Nepal · <time id="localTime" datetime="">--:--</time></p>
-    </div>
-    <nav class="wrap index-nav" aria-label="Site index">
-      <a href="#projects">Projects</a>
-      <a href="#tools">Tools</a>
-      <a href="#archive">Archive</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#about">About</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="wrap opening" aria-labelledby="opening-title">
-      <p class="kicker">Portfolio</p>
-      <h1 id="opening-title">Devraj Khatiwada</h1>
-      <p class="lede">Computer Science student from Nepal. I build web apps, Linux desktop tools, and teaching material for CS students.</p>
-    </section>
-
-    <section class="wrap section" id="projects" aria-labelledby="projects-title">
-      <div class="section-head">
-        <h2 id="projects-title">Projects</h2>
-      </div>
-
-      <article class="feature" aria-labelledby="bidhan-title">
-        <div class="feature-head">
-          <h3 id="bidhan-title">Bidhan <span class="np" lang="ne">विधान</span></h3>
-          <p class="status"><span class="pulse" aria-hidden="true"></span>Live</p>
-        </div>
-        <p class="problem">The Constitution of Nepal runs to 308 articles, and most people meet it as a PDF. What if studying it felt closer to a language app than to homework?</p>
-        <div class="feature-body">
-          <div>
-          <p>Bidhan organizes all 308 articles into lessons along a branching unlock path. Each lesson pairs reading with a quiz, with hearts, XP, streaks, and leaderboards. Includes full-text search and an admin panel.</p>
-          <pre class="diagram" aria-label="Simplified unlock path diagram"><code>Part 1: Art. 4 --&gt; Art. 5 --&gt; Art. 6
-                \-&gt; Art. 9 (unlocks after 4 + 5)
-328 edges like this, not a straight line</code></pre>
-          </div>
-          <dl class="spec">
-            <div><dt>Stack</dt><dd>React 18, TypeScript, FastAPI, PostgreSQL 17</dd></div>
-            <div><dt>Content</dt><dd>308 articles, 35 parts, 1,200+ quiz questions</dd></div>
-          </dl>
-        </div>
-        <p class="links">
-          <a class="btn" href="https://bidhan.vercel.app" target="_blank" rel="noopener">Open the app</a>
-          <a href="https://github.com/diwash-9/bidhan" target="_blank" rel="noopener">Repository</a>
-          <a href="https://bidhan-api.onrender.com/docs" target="_blank" rel="noopener">API docs</a>
-        </p>
-      </article>
-
-      <article class="feature" aria-labelledby="matchday-title">
-        <div class="feature-head">
-          <h3 id="matchday-title">Matchday</h3>
-          <p class="status"><span class="pulse" aria-hidden="true"></span>Live, v1.0.0</p>
-        </div>
-        <p class="problem">Small tournaments tend to run on a spreadsheet, a group chat, and hope. Scores go missing, tables go stale, and nobody knows when they play next.</p>
-        <div class="feature-body">
-          <div>
-            <p>Matchday carries a tournament from registration to certificates: group draw, fixtures, points tables, knockout brackets, a certificate designer, and public pages that teams can follow without logging in.</p>
-            <dl class="spec">
-              <div><dt>Stack</dt><dd>Next.js 16, React 19, Prisma, Turso</dd></div>
-            </dl>
-          </div>
-        </div>
-        <p class="links">
-          <a class="btn" href="https://matchdayhq.vercel.app" target="_blank" rel="noopener">Open the app</a>
-          <span class="note">Source is private for now.</span>
-        </p>
-      </article>
-    </section>
-
-    <section class="wrap section" id="tools" aria-labelledby="tools-title">
-      <div class="section-head">
-        <h2 id="tools-title">Developer tools</h2>
-        <p class="sub">Utilities for the Omarchy Linux desktop.</p>
-      </div>
-      <div class="tool-list">
-        <article class="tool" aria-labelledby="tool-bsdate">
-          <header><h3 id="tool-bsdate">omarchy-bsdate</h3><p class="status status-quiet">Maintained</p></header>
-          <p>Nepali date widget and calendar popup for the Omarchy bar. Shows Bikram Sambat alongside the English date, works offline, supports Roman and Devanagari.</p>
-          <p class="mono-line"><span>QML, Bash, Quickshell</span></p>
-          <p class="cmd-row"><code id="cmd-bsdate">omarchy plugin add https://github.com/diwash-9/omarchy-bsdate --enable</code><button class="mini-btn" type="button" data-copy="cmd-bsdate">Copy</button></p>
-          <p class="links"><a href="https://github.com/diwash-9/omarchy-bsdate" target="_blank" rel="noopener">Repository</a></p>
-        </article>
-        <article class="tool" aria-labelledby="tool-min">
-          <header><h3 id="tool-min">omarchy-minimize <span class="dim">(OmaVeil)</span></h3><p class="status status-quiet">Maintained</p></header>
-          <p>Minimize and restore workflow for Hyprland. Super+H hides a window, Super+I finds it again, Super+U brings back the last one. Written in Bash, no daemon.</p>
-          <p class="mono-line"><span>Bash, hyprctl, jq</span></p>
-          <p class="links"><a href="https://github.com/diwash-9/omarchy-minimize" target="_blank" rel="noopener">Repository</a></p>
-        </article>
-        <article class="tool" aria-labelledby="tool-yt">
-          <header><h3 id="tool-yt">omarchy-ytmp3</h3><p class="status status-quiet">Maintained</p></header>
-          <p>YouTube to MP3 and MP4 downloader for Omarchy, with launcher and terminal use. Handles playlists and adds basic metadata. Available on the AUR.</p>
-          <p class="mono-line"><span>Bash, yt-dlp, ffmpeg</span></p>
-          <p class="cmd-row"><code id="cmd-yt">yay -S omarchy-ytmp3</code><button class="mini-btn" type="button" data-copy="cmd-yt">Copy</button></p>
-          <p class="links"><a href="https://github.com/diwash-9/omarchy-ytmp3" target="_blank" rel="noopener">Repository</a></p>
-        </article>
-      </div>
-    </section>
-
-    <section class="wrap section" id="archive" aria-labelledby="archive-title">
-      <div class="section-head">
-        <h2 id="archive-title">Archive</h2>
-        <p class="sub">Coursework, games, and utilities.</p>
-      </div>
-      <div class="archive-controls">
-        <div class="search-wrap">
-          <label class="visually-hidden" for="archiveSearch">Search the archive</label>
-          <input id="archiveSearch" type="search" placeholder="Search name, stack, or idea..." autocomplete="off" />
-        </div>
-        <div class="filter-row" role="group" aria-label="Filter by kind">
-          <button class="chip active" type="button" data-filter="all" aria-pressed="true">All</button>
-          <button class="chip" type="button" data-filter="applications" aria-pressed="false">Applications</button>
-          <button class="chip" type="button" data-filter="tools" aria-pressed="false">Developer tools</button>
-          <button class="chip" type="button" data-filter="experiments" aria-pressed="false">Experiments</button>
-        </div>
-        <p class="count" id="archiveCount" role="status"></p>
-      </div>
-      <ul class="ledger" id="ledger">
-        <li class="ledger-row" data-kind="applications" data-search="bidhan constitution study game react typescript fastapi postgres">
-          <div><a href="https://bidhan.vercel.app" target="_blank" rel="noopener"><strong>Bidhan</strong></a><span class="kind">Application</span></div>
-          <p>Study game for the Constitution of Nepal. Details above.</p>
-        </li>
-        <li class="ledger-row" data-kind="applications" data-search="matchday tournament fixtures brackets next.js prisma turso">
-          <div><a href="https://matchdayhq.vercel.app" target="_blank" rel="noopener"><strong>Matchday</strong></a><span class="kind">Application</span></div>
-          <p>Tournament manager. Details above.</p>
-        </li>
-        <li class="ledger-row" data-kind="tools" data-search="omarchy-bsdate bikram sambat nepali calendar qml bash quickshell">
-          <div><a href="https://github.com/diwash-9/omarchy-bsdate" target="_blank" rel="noopener"><strong>omarchy-bsdate</strong></a><span class="kind">Developer tool</span></div>
-          <p>Nepali date widget for the Omarchy bar. Details above.</p>
-        </li>
-        <li class="ledger-row" data-kind="tools" data-search="omarchy-minimize omaveil hyprland minimize restore bash">
-          <div><a href="https://github.com/diwash-9/omarchy-minimize" target="_blank" rel="noopener"><strong>omarchy-minimize</strong></a><span class="kind">Developer tool</span></div>
-          <p>Minimize workflow for Hyprland. Details above.</p>
-        </li>
-        <li class="ledger-row" data-kind="tools" data-search="omarchy-ytmp3 youtube mp3 mp4 downloader yt-dlp ffmpeg aur">
-          <div><a href="https://github.com/diwash-9/omarchy-ytmp3" target="_blank" rel="noopener"><strong>omarchy-ytmp3</strong></a><span class="kind">Developer tool</span></div>
-          <p>YouTube downloader on the AUR. Details above.</p>
-        </li>
-        <li class="ledger-row" data-kind="applications" data-search="quicknote quick-note java swing text editor notepad dark mode">
-          <div><a href="https://github.com/diwash-9/quick-note" target="_blank" rel="noopener"><strong>QuickNote</strong></a><span class="kind">Application</span></div>
-          <p>Desktop text editor in Java Swing.</p>
-        </li>
-        <li class="ledger-row" data-kind="experiments" data-search="hangman football java console game ascii words">
-          <div><a href="https://github.com/diwash-9/Hangman-Java-Football-Edition" target="_blank" rel="noopener"><strong>Hangman, Football Edition</strong></a><span class="kind">Experiment</span></div>
-          <p>Console hangman in Java with a football word list.</p>
-        </li>
-        <li class="ledger-row" data-kind="applications" data-search="currency converter javascript exchange rates">
-          <div><a href="https://github.com/diwash-9/currency-converter" target="_blank" rel="noopener"><strong>currency-converter</strong></a><span class="kind">Application</span></div>
-          <p>Currency converter with live rates.</p>
-        </li>
-        <li class="ledger-row" data-kind="applications" data-search="unit wise converter units javascript">
-          <div><a href="https://github.com/diwash-9/unit-wise-converter" target="_blank" rel="noopener"><strong>unit-wise-converter</strong></a><span class="kind">Application</span></div>
-          <p>Unit conversion tool.</p>
-        </li>
-        <li class="ledger-row" data-kind="applications" data-search="workbud productivity javascript">
-          <div><a href="https://github.com/diwash-9/workbud" target="_blank" rel="noopener"><strong>workbud</strong></a><span class="kind">Application</span></div>
-          <p>Small productivity experiment on the web.</p>
-        </li>
-        <li class="ledger-row" data-kind="experiments" data-search="quiz game python cli">
-          <div><a href="https://github.com/diwash-9/Quiz-Game" target="_blank" rel="noopener"><strong>Quiz Game</strong></a><span class="kind">Experiment</span></div>
-          <p>Command line quiz program in Python.</p>
-        </li>
-        <li class="ledger-row" data-kind="experiments" data-search="password manager python vault">
-          <div><a href="https://github.com/diwash-9/Password-Manager-in-Python" target="_blank" rel="noopener"><strong>Password Manager</strong></a><span class="kind">Experiment</span></div>
-          <p>Local password storage practice project.</p>
-        </li>
-        <li class="ledger-row" data-kind="experiments" data-search="genetic algorithm python evolution">
-          <div><a href="https://github.com/diwash-9/Genetic-Algorithm" target="_blank" rel="noopener"><strong>Genetic Algorithm</strong></a><span class="kind">Experiment</span></div>
-          <p>Genetic algorithm implemented from scratch.</p>
-        </li>
-        <li class="ledger-row" data-kind="experiments" data-search="ai lab jupyter notebooks college coursework">
-          <div><a href="https://github.com/diwash-9/AI---LAB" target="_blank" rel="noopener"><strong>AI-LAB</strong></a><span class="kind">Experiment</span></div>
-          <p>College AI lab notebooks.</p>
-        </li>
-        <li class="ledger-row" data-kind="experiments" data-search="react playground learning useeffect javascript">
-          <div><a href="https://github.com/diwash-9/react" target="_blank" rel="noopener"><strong>react playground</strong></a><span class="kind">Experiment</span></div>
-          <p>Practice repo from learning React.</p>
-        </li>
-        <li class="ledger-row" data-kind="experiments" data-search="swing java class gui exercises college">
-          <div><a href="https://github.com/diwash-9/swing-java-class" target="_blank" rel="noopener"><strong>swing-java-class</strong></a><span class="kind">Experiment</span></div>
-          <p>Java Swing classroom exercises.</p>
-        </li>
-        <li class="ledger-row" data-kind="experiments" data-search="net-centric computing c# coursework solutions">
-          <div><a href="https://github.com/diwash-9/Net-Centric-Computing-Solutions" target="_blank" rel="noopener"><strong>Net-Centric Computing</strong></a><span class="kind">Experiment</span></div>
-          <p>Coursework solutions in C#.</p>
-        </li>
-      </ul>
-      <p class="empty" id="ledgerEmpty" hidden>No matches. Try a shorter term, or <button type="button" id="ledgerReset">clear the search</button>.</p>
-      <p class="links"><a href="https://github.com/diwash-9?tab=repositories" target="_blank" rel="noopener">All repositories on GitHub</a></p>
-    </section>
-
-    <section class="wrap section" id="teaching" aria-labelledby="teaching-title">
-      <div class="section-head">
-        <h2 id="teaching-title">Teaching</h2>
-        <p class="sub">Video lectures for CSIT, BCA, BIM, and engineering students through Digital Nomad Academy, plus study material work with HamroCSIT.</p>
-      </div>
-      <div class="playlist-list">
-        <article class="playlist" aria-labelledby="pl1-title">
-          <header>
-            <h3 id="pl1-title">Numerical Method in Nepali</h3>
-            <p class="mono-line"><span>26 videos</span><span>Digital Nomad Academy</span></p>
-          </header>
-          <p><strong>About:</strong> Numerical Methods chapter by chapter, from non-linear equations to differentiation and integration, with worked examples.</p>
-          <p><strong>For:</strong> bachelor level students taking Numerical Methods. Taught in Nepali.</p>
-          <p class="links">
-            <a href="https://www.youtube.com/playlist?list=PL_t29gGD01swfExTzXakkyyuExvVdsh9b" target="_blank" rel="noopener">Open on YouTube</a>
-          </p>
-        </article>
-        <article class="playlist" aria-labelledby="pl2-title">
-          <header>
-            <h3 id="pl2-title">Complete EDA with Python: 25 Years of Premier League Data</h3>
-            <p class="mono-line"><span>10 videos</span><span>Digital Nomad Academy</span></p>
-          </header>
-          <p><strong>About:</strong> exploratory data analysis in Python on 25 years of football match data, from cleaning to insights.</p>
-          <p><strong>For:</strong> Python learners meeting data analysis for the first time.</p>
-          <p class="links">
-            <a href="https://www.youtube.com/playlist?list=PLLSUNk1as9EE" target="_blank" rel="noopener">Open on YouTube</a>
-          </p>
-        </article>
-        <article class="playlist" aria-labelledby="pl3-title">
-          <header>
-            <h3 id="pl3-title">BSc.CSIT Semester-wise Breakdown</h3>
-            <p class="mono-line"><span>3 videos</span><span>Digital Nomad Academy</span></p>
-          </header>
-          <p><strong>About:</strong> walkthroughs of the first three semester CSIT syllabi with study resources.</p>
-          <p><strong>For:</strong> current and incoming BSc.CSIT students.</p>
-          <p class="links">
-            <a href="https://www.youtube.com/playlist?list=PL_t29gGD01symSIyiEgRc5KgUDnsg9Sp6" target="_blank" rel="noopener">Open on YouTube</a>
-          </p>
-        </article>
-      </div>
-      <p class="links"><a href="https://www.youtube.com/@digitalnomadacademy2" target="_blank" rel="noopener">Digital Nomad Academy on YouTube</a></p>
-    </section>
-
-    <section class="wrap section" id="about" aria-labelledby="about-title">
-      <div class="section-head">
-        <h2 id="about-title">About</h2>
-      </div>
-      <div class="about-grid">
-        <dl class="spec">
-          <div><dt>Study</dt><dd>BSc CSIT, Samriddhi College, Tribhuvan University, 2023 to 2027 (in progress)</dd></div>
-          <div><dt>Teaching</dt><dd>Digital Nomad Academy (from 2024), study material with HamroCSIT</dd></div>
-          <div><dt>Elsewhere</dt><dd>Founding member, Samriddhi IT Club; Cisco IT Essentials</dd></div>
-        </dl>
-        <ul class="contact-list">
-          <li><a href="mailto:devrajkhatiwada003@gmail.com">devrajkhatiwada003@gmail.com</a><span>Email, replies within a day</span></li>
-          <li><a href="https://github.com/diwash-9" target="_blank" rel="noopener">github.com/diwash-9</a><span>Code and docs</span></li>
-          <li><a href="https://www.linkedin.com/in/devraj-khatiwada-733a95264/" target="_blank" rel="noopener">LinkedIn</a><span>Work and teaching history</span></li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="wrap footer">
-    <p>Built with plain HTML, CSS, and JavaScript. <a href="https://github.com/diwash-9/diwash-9.github.io" target="_blank" rel="noopener">Source</a></p>
-    <p><span id="footYear"></span> Devraj Khatiwada · <a href="#top">Back to top</a></p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+      // GitHub Pages SPA fallback: restore the path stashed by 404.html.
+      ;(function () {
+        var redirect = sessionStorage.redirect
+        delete sessionStorage.redirect
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect)
+        }
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
