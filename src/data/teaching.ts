@@ -71,6 +71,6 @@ export const contacts = [
   {
     label: "LinkedIn",
     note: "Work and teaching history",
-    href: "https://www.linkedin.com/in/devraj-khatiwada-733a95264/",
+    href: "https://www.linkedin.com/in/devrajkhatiwada/",
   },
 ]

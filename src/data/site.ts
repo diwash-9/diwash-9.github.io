@@ -13,7 +13,7 @@ export const site = {
   email: "devrajkhatiwada003@gmail.com",
   github: "https://github.com/diwash-9",
   githubRepos: "https://github.com/diwash-9?tab=repositories",
-  linkedin: "https://www.linkedin.com/in/devraj-khatiwada-733a95264/",
+  linkedin: "https://www.linkedin.com/in/devrajkhatiwada/",
   youtube: "https://www.youtube.com/@digitalnomadacademy2",
   medium: "https://medium.com/@devrajkhatiwada003",
 } as const
