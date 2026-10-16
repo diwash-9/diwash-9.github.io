@@ -1,7 +1,6 @@
 import { useEffect } from "react"
 
 const BASE_URL = "https://diwash-9.github.io"
-const OG_IMAGE = `${BASE_URL}/og.png`
 
 type MetaAttr = "name" | "property"
 
@@ -37,24 +36,28 @@ export function Seo({
   title,
   description,
   path = "/",
+  ogImage = "/og.png",
 }: {
   title: string
   description: string
   path?: string
+  /** Path to a social preview image, e.g. "/og/projects.png". */
+  ogImage?: string
 }) {
   useEffect(() => {
     const url = `${BASE_URL}${path}`
+    const image = `${BASE_URL}${ogImage}`
     document.title = title
     upsertMeta("name", "description", description)
     upsertMeta("property", "og:title", title)
     upsertMeta("property", "og:description", description)
     upsertMeta("property", "og:url", url)
-    upsertMeta("property", "og:image", OG_IMAGE)
+    upsertMeta("property", "og:image", image)
     upsertMeta("name", "twitter:title", title)
     upsertMeta("name", "twitter:description", description)
-    upsertMeta("name", "twitter:image", OG_IMAGE)
+    upsertMeta("name", "twitter:image", image)
     upsertCanonical(url)
-  }, [title, description, path])
+  }, [title, description, path, ogImage])
 
   return null
 }

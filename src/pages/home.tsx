@@ -60,11 +60,9 @@ export default function Home() {
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           {projects.map((project) => (
-            <a
+            <Link
               key={project.id}
-              href={project.links[0].href}
-              target="_blank"
-              rel="noopener"
+              to={`/projects/${project.slug}`}
               className="group"
             >
               <Card className="h-full gap-3 transition-colors hover:border-primary/60">
@@ -78,12 +76,12 @@ export default function Home() {
                         </span>
                       ) : null}
                     </span>
-                    <ArrowUpRight className="mt-1 size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    <ArrowRight className="mt-1 size-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5" />
                   </CardTitle>
                   <CardDescription>{project.problem}</CardDescription>
                 </CardHeader>
               </Card>
-            </a>
+            </Link>
           ))}
         </div>
       </section>

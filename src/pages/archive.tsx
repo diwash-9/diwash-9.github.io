@@ -40,6 +40,7 @@ export default function Archive() {
         title="Archive · Devraj Khatiwada"
         description="Coursework, games, and utilities: everything else Devraj Khatiwada has built, searchable."
         path="/archive"
+        ogImage="/og/archive.png"
       />
       <PageHeader
         kicker="Archive"

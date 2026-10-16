@@ -11,6 +11,7 @@ export default function About() {
         title="About · Devraj Khatiwada"
         description="CSIT student at Tribhuvan University, teacher at Digital Nomad Academy, and founding member of Samriddhi IT Club."
         path="/about"
+        ogImage="/og/about.png"
       />
       <PageHeader
         kicker="About"

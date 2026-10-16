@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && npm run prerender",
+    "prerender": "node scripts/prerender.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "typecheck": "tsc -b --noEmit",
@@ -49,6 +50,7 @@
     "lint-staged": "^17.6.0",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.8.1",
+    "puppeteer": "^25.14.0",
     "tailwindcss": "^4.0.0",
     "tw-animate-css": "^1.2.0",
     "typescript": "~5.7.2",

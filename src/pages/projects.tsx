@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+import { ArrowRight } from "lucide-react"
 import { PageHeader } from "@/components/page-header"
 import { StatusDot } from "@/components/status-dot"
 import { Seo } from "@/components/seo"
@@ -14,6 +16,7 @@ export default function Projects() {
         title={`Projects · ${site.name}`}
         description="Bidhan and Matchday: web applications Devraj Khatiwada has carried from idea to something people use."
         path="/projects"
+        ogImage="/og/projects.png"
       />
       <PageHeader
         kicker="Projects"
@@ -27,7 +30,12 @@ export default function Projects() {
             <CardHeader className="gap-3 pt-7">
               <div className="flex flex-wrap items-center justify-between gap-3">
                 <CardTitle className="flex items-baseline gap-2 text-2xl">
-                  {project.title}
+                  <Link
+                    to={`/projects/${project.slug}`}
+                    className="underline-offset-4 hover:underline"
+                  >
+                    {project.title}
+                  </Link>
                   {project.nativeTitle ? (
                     <span className="text-lg text-muted-foreground" lang="ne">
                       {project.nativeTitle}
@@ -68,12 +76,17 @@ export default function Projects() {
                 </dl>
               </div>
               <div className="flex flex-wrap items-center gap-3 pt-1">
-                {project.links.map((link, i) => (
+                <Button asChild>
+                  <Link to={`/projects/${project.slug}`}>
+                    Read the breakdown <ArrowRight className="size-4" />
+                  </Link>
+                </Button>
+                {project.links.map((link) => (
                   <Button
                     key={link.href}
                     asChild
-                    variant={i === 0 ? "default" : "link"}
-                    className={i === 0 ? undefined : "px-0"}
+                    variant="link"
+                    className="px-0"
                   >
                     <a href={link.href} target="_blank" rel="noopener">
                       {link.label}

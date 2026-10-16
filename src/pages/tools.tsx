@@ -12,6 +12,7 @@ export default function Tools() {
         title="Tools · Devraj Khatiwada"
         description="Small, dependency-light utilities for the Omarchy Linux desktop: bsdate, minimize, and ytmp3."
         path="/tools"
+        ogImage="/og/tools.png"
       />
       <PageHeader
         kicker="Developer tools"

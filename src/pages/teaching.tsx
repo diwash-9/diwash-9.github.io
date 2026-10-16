@@ -12,6 +12,7 @@ export default function Teaching() {
         title="Teaching · Devraj Khatiwada"
         description="Video lectures for CSIT, BCA, BIM, and engineering students through Digital Nomad Academy."
         path="/teaching"
+        ogImage="/og/teaching.png"
       />
       <PageHeader
         kicker="Teaching"

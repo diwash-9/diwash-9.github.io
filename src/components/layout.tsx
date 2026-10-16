@@ -60,17 +60,6 @@ function Footer() {
         <p>
           <span>{new Date().getFullYear()}</span> {site.name}
         </p>
-        <p>
-          Built with React and shadcn/ui ·{" "}
-          <a
-            href="https://github.com/diwash-9/diwash-9.github.io"
-            target="_blank"
-            rel="noopener"
-            className="text-foreground underline underline-offset-4"
-          >
-            Source
-          </a>
-        </p>
       </div>
     </footer>
   )

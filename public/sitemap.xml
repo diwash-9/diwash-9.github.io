@@ -9,6 +9,14 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://diwash-9.github.io/projects/bidhan</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://diwash-9.github.io/projects/matchday</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://diwash-9.github.io/tools</loc>
     <priority>0.8</priority>
   </url>
@@ -19,6 +27,10 @@
   <url>
     <loc>https://diwash-9.github.io/teaching</loc>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://diwash-9.github.io/credentials</loc>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://diwash-9.github.io/about</loc>

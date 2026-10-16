@@ -75,6 +75,11 @@ export const navItems: NavItem[] = [
     blurb: "Video lectures for CSIT, BCA, BIM, and engineering students.",
   },
   {
+    label: "Credentials",
+    to: "/credentials",
+    blurb: "Certificates, hackathons, workshops, and recognitions.",
+  },
+  {
     label: "About",
     to: "/about",
     blurb: "Study, teaching, and where to find me.",
